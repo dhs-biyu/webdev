@@ -20,3 +20,5 @@ app.route("/jokes").get(function(req,res,next) {
 	res.send(jokes[randomNumber]);
 	//res.send(jokes[Math.floor(Math.random()*jokes.length)]);
 });
+
+//Pls work ;-;
