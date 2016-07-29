@@ -1,16 +1,25 @@
 {
   "name": "webdev",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node indexJokes.js"
+    "start": "node indexJokes.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhs-biyu/webdev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhs-biyu/webdev/issues"
+  },
+  "homepage": "https://github.com/dhs-biyu/webdev#readme",
+  "description": ""
 }
