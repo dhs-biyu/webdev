@@ -6,37 +6,29 @@ body {
     font-size: 1.5rem;
 }
 
-#setup {
-  color: blue;
+a {
+    color: darkgray;
 }
 
-#punchline {
-  color: red;
-  margin-top: 60px;
-}
-
-#voting {
-  margin-top: 50px;
-}
-
-#voting a {
-  color: purple;
+a:visited {
+    color: darkgray;
 }
 
 a:hover {
     color: floralwhite;
 }
 
+h2 {
+    font-size: 3.0rem;
+    padding: 0 25% 0 0;
+}
 
-button {
-  font-size: 60px;
-  background: green;
-  box-shadow: 5px;
-  border-radius: 10px;
-  margin-top: 100px;
-  position: absolute;
-  bottom: 100px;
-
+.button {
+    border-radius: 6px;
+    font-family: 'Dosis', sans-serif;
+    width: 15%;
+    color: white;
+    background-color: #570784;
 }
 
 #punchline {
