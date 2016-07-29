@@ -23,14 +23,6 @@ body {
   color: purple;
 }
 
-a {
-    color: darkgray;
-}
-
-a:visited {
-    color: darkgray;
-}
-
 a:hover {
     color: floralwhite;
 }
