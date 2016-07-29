@@ -6,11 +6,11 @@ var jokes=[{setup:"Our wedding was so beautiful,",punchline:"even the cake was i
 app.listen(process.env.PORT || 8888);
 
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + 'index.html')
+	res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/app.js', function(req, res) {
-    res.sendFile(__dirname + 'app.js')
+    res.sendFile(__dirname + '/app.js');
 });
 
 app.route("/jokes").get(function(req,res,next) {
