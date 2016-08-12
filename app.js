@@ -1,74 +1,41 @@
+var index = 0;
+ 
 $(function() {
-    $("#setup, #punchline, #voting, #votes-container").hide();
-
     $("#getJoke").click(
         function() {
-            $("#setup, #punchline, #voting, #votes-container").show();
-
             $.get("/jokes",function(data){
                 $("#setup").html(data.setup);
                 $("#punchline").html(data.punchline);
-
-                if (data.votes === undefined) {
-                    $("#votes").html(0);
-                } else {
-                    $("#votes").html(data.votes);
-                }
-
-                changeVoteColor(data.votes);
-
+                index = data._id;
+                alert(index);
+                //alert(index);
             },"json")
         }
     );
-
-    $("#upvote").on("click", function() {
-
+   
+    $("#upvote").on('click', function() {
+        //$.post('/upvote');
         $.ajax({
             url: '/upvote',
-            type: 'get',
-
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ id: index }),
             success: function(data, status, xhr) {
-                $("#votes").html(data.votes);
-
-                changeVoteColor(data.votes);
+                $('#votes').html(data.votes);
             }
         });
-		
-		/* $.ajax({
-			url: '/upvote',
-			type: 'POST',
-			contentType: 'application/json',
-			data: JSON.stringify({id:index})
-		});   */
     });
-
-    $("#downvote").on("click", function() {
-
+   
+    $("#downvote").on('click', function() {
+        // $.post('/downvote');
         $.ajax({
             url: '/downvote',
-            type: 'get',
-
-            success: function(data, status, xhr) {
-                $("#votes").html(data.votes);
-
-                changeVoteColor(data.votes);
-            }
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ id: index }),
+                success: function(data, status, xhr) {
+                    $('#votes').html(data.votes);
+                }
         });
-		/* $.ajax({
-			url: '/downvote',
-			type: 'POST',
-			contentType: 'application/json',
-			data: JSON.stringify({id:index})
-		});   */
     });
-
-    function changeVoteColor(numVotes) {
-        if (numVotes < 0) {
-            $("#votes").css('color', 'red');
-        } else if (numVotes > 0) {
-            $("#votes").css('color', 'lightgreen');
-        } else {
-            $("#votes").css('color', 'white');
-        }
-    };
 });
