@@ -23,7 +23,7 @@ h2 {
     padding: 0 25% 0 0;
 }
 
-.button {
+button {
     border-radius: 6px;
     font-family: 'Dosis', sans-serif;
     width: 15%;
