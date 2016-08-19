@@ -6,7 +6,7 @@ var app = express();
 var port = 8888;
 var db, collection;
 
-var uri = "mongodb://" + process.env.MONGOLAB_USER + ":" + process.env.MONGOLAB_PASSWORD + "@ds153745.mlab.com:53745/nodewebdev";
+var uri = "mongodb://" + process.env.MONGOLAB_PASSWORD + ":" + process.env.MONGOLAB_PASSWORD + "@ds153745.mlab.com:53745/nodewebdev";
 var jokes=[{setup:"Our wedding was so beautiful,",punchline:"even the cake was in tiers", votes: 0},{setup:"I'm reading a book on the history of glue",punchline:"I just can't seem to put it down", votes: 0},{setup:"What do you call an Argentinian with a rubber toe?",punchline:"Roberto", votes: 0}];
 
 app.use(bodyParser.json());
