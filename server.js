@@ -102,18 +102,20 @@ app.post('/createjoke', function(req, res) {
     );
 });
 
-app.get('/alljokes', function(req, res) {
-    collection.find().toArray(
-        function(err, resultArray) {
-            res.send(resultArray)
-        }
-    );
-});
 
 app.delete('/deletejoke', function(req, res) {
     collection.deleteOne({_id: ObjectId(req.body.id)},
         function(err, results){
             res.send(results);
+        }
+    );
+});
+
+
+app.get('/alljokes', function(req, res) {
+    collection.find().toArray(
+        function(err, resultArray) {
+            res.send(resultArray)
         }
     );
 });
