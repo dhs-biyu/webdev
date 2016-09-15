@@ -1,6 +1,6 @@
 body {
     font-family: 'Dosis', sans-serif;
-    background: linear-gradient(red, white);
+    background: linear-gradient(blue, cornflowerblue,white);
     margin: 20% 20% 20% 20%;
     color: white;
     font-size: 1.5rem;
@@ -28,7 +28,7 @@ button {
     font-family: 'Dosis', sans-serif;
     width: 15%;
     color: white;
-    background-color: #570784;
+    background-color: #ff0fb8;
 }
 
 #punchline {
